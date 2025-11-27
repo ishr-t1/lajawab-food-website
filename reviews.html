@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews - Lajawab</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Restaurant Logo" class="logo">
+            <span class="restaurant-name">Lajawab</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="order.html">Order Online</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <a href="order.html" class="cta-button">Order Now</a>
+    </header>
+
+    <section class="reviews">
+        <h1>Customer Reviews</h1>
+        <div class="average-rating">
+            <!-- Display average rating here -->
+            <p>Average Rating: 4.5 Stars</p>
+        </div>
+        <div class="review-list">
+            <!-- Display individual reviews here -->
+            <div class="review">
+                <h3>John Doe</h3>
+                <p>Rating: 5 Stars</p>
+                <p>"Amazing food and great service! Will definitely come back."</p>
+            </div>
+            <div class="review">
+                <h3>Jane Smith</h3>
+                <p>Rating: 4 Stars</p>
+                <p>"The food was delicious, but the wait time was a bit long."</p>
+            </div>
+            <div class="review">
+                <h3>Sam Wilson</h3>
+                <p>Rating: 5 Stars</p>
+                <p>"Best dining experience I've had in a long time. Highly recommend!"</p>
+            </div>
+        </div>
+
+        <h2>Submit Your Review</h2>
+        <form class="review-form">
+            <label for="rating">Rating</label>
+            <select id="rating" name="rating">
+                <option value="5">5 Stars</option>
+                <option value="4">4 Stars</option>
+                <option value="3">3 Stars</option>
+                <option value="2">2 Stars</option>
+                <option value="1">1 Star</option>
+            </select>
+
+            <label for="review-text">Review</label>
+            <textarea id="review-text" name="review-text" required></textarea>
+
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <button type="submit">Submit Review</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Lajawab. All rights reserved.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

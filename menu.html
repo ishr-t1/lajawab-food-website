@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Lajawab</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Restaurant Logo" class="logo">
+            <span class="restaurant-name">Lajawab</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="order.html">Order Online</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <a href="order.html" class="cta-button">Order Now</a>
+    </header>
+
+    <section class="menu">
+        <h1>Our Menu</h1>
+        <div class="menu-controls">
+            <input type="text" id="search-bar" placeholder="Search dishes..." oninput="searchMenu()">
+        </div>
+
+        <div class="menu-filters">
+            <button onclick="scrollToCategory('starters')">Starters</button>
+            <button onclick="scrollToCategory('main-courses')">Main Courses</button>
+            <button onclick="scrollToCategory('desserts')">Desserts</button>
+            <button onclick="scrollToCategory('beverages')">Beverages</button>
+        </div>
+
+        <div class="special-offers">
+            <h2>Special Offers</h2>
+            <div class="special-offer-item">
+                <img src="mojito.jpg" alt="Special Dish 1">
+                <div>
+                    <h3>Chef's Special Dish 1</h3>
+                    <p>Description of the special dish 1.</p>
+                    <p><strong>Discount: 20% off</strong></p>
+                    <p>Rating: ★★★★☆ (4.5)</p>
+                    <p><strong>Customer Reviews:</strong> "Amazing dish!" - John D.</p>
+                </div>
+            </div>
+            <div class="special-offer-item">
+                <img src="milkshakes.jpg" alt="Special Dish 2">
+                <div>
+                    <h3>Chef's Special Dish 2</h3>
+                    <p>Description of the special dish 2.</p>
+                    <p><strong>Discount: 15% off</strong></p>
+                    <p>Rating: ★★★★☆ (4.7)</p>
+                    <p><strong>Customer Reviews:</strong> "Best I've ever had!" - Jane S.</p>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="featured-dish">
+            <h2>Chef's Recommendaations</h2>
+            <div class="featured-dish-item">
+                <img src="Chili chicken.jpg" alt="Featured Dish">
+                <div class="featured-details">
+                    <h3>Featured Dish Name</h3>
+                    <p>Description of the featured dish.</p>
+                    <p><strong>Price: $25.00</strong></p>
+                    <p>Rating: ★★★★★ (4.9)</p>
+                    <p><strong>Customer Reviews:</strong> "Absolutely fantastic!" - Alex P.</p>
+                </div>
+            </div>
+            <div class="featured-dish-item">
+                <img src="chicken biryani.jpg" alt="Featured Dish">
+                <div class="featured-details">
+                    <h3>Featured Dish Name</h3>
+                    <p>Description of the featured dish.</p>
+                    <p><strong>Price: $25.00</strong></p>
+                    <p>Rating: ★★★★★ (4.9)</p>
+                    <p><strong>Customer Reviews:</strong> "Absolutely fantastic!" - Alex P.</p>
+                </div>
+            </div>
+        </div>
+           
+         <!-- Starters -->  
+        <div class="menu-category">
+            <h2 id="starters">Starters</h2>
+            <div class="menu-items" data-category="starters" >
+                <div class="menu-item" data-name="Paneer Tikka" data-price="170" data-rating="4.5">
+                    <img src="Paneer Tikka.jpg" alt="Paneer Tikka">
+                    <div class="menu-item-details">
+                        <h2>Paneer Tikka</h2>
+                        <p>Description of starter 1</p>
+                        <p><strong>₹170.00</strong></p>
+                        <p>Rating: ★★★★☆ (4.5)</p>
+                        <button onclick="addToOrder('Paneer Tikka',170.00)">Order Now</button>
+                    </div>
+                </div>
+                <div class="menu-item" data-name="Cheese balls" data-price="220" data-rating="4.7">
+                    <img src="Cheese balls.jpg" alt="Cheese balls">
+                    <div class="menu-item-details">
+                        <h2>Cheese balls</h2>
+                        <p>Description of starter 2</p>
+                        <p><strong>₹220.00</strong></p>
+                        <p>Rating: ★★★★☆ (4.7)</p>
+                        <button onclick="addToOrder('Cheese balls',220.00)">Order Now</button>
+                    </div>
+                </div>
+                <div class="menu-item" data-name="Crispy prawn balls" data-price="210" data-rating="4.3">
+                    <img src="Crispy prawn balls.jpg" alt="Crispy prawn balls">
+                    <div class="menu-item-details">
+                        <h2>Crispy prawn balls</h2>
+                        <p>Description of starter 3</p>
+                        <p><strong>₹210.00</strong></p>
+                        <p>Rating: ★★★★☆ (4.3)</p>
+                        <button onclick="addToOrder('Crispy prawn balls',210.00)">Order Now</button>
+                    </div>
+                </div>
+                <div class="menu-item" data-name="Shammi kebab" data-price="170" data-rating="4.7">
+                    <img src="shammi kebab.jpg" alt="Shammi kebab">
+                    <div class="menu-item-details">
+                        <h2>Shammi kebab</h2>
+                        <p>Description of starter 4</p>
+                        <p><strong>₹170.00</strong></p>
+                        <p>Rating: ★★★★★ (4.7)</p>
+                        <button onclick="addToOrder('Shammi kebab',170.00)">Order Now</button>
+                    </div>
+                </div>
+                <div class="menu-item" data-name="Chili chicken" data-price="250" data-rating="4.5">
+                    <img src="Chili chicken.jpg" alt="Chili chicken">
+                    <div class="menu-item-details">
+                        <h2>Chili chicken</h2>
+                        <p>Description of starter 5</p>
+                        <p><strong>₹250.00</strong></p>
+                        <p>Rating: ★★★★★ (4.5)</p>
+                        <button onclick="addToOrder('Chili chicken',250.00)">Order Now</button>
+                    </div>
+                </div>
+                <div class="menu-item" data-name="Garlic bread" data-price="205" data-rating="4.7">
+                    <img src="garlic bread.jpg" alt="Garlic bread">
+                    <div class="menu-item-details">
+                        <h2>Garlic bread</h2>
+                        <p>Description of starter 6</p>
+                        <p><strong>₹205.00</strong></p>
+                        <p>Rating: ★★★★★ (4.7)</p>
+                        <button onclick="addToOrder('Garlic bread',205.00)">Order Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+        <!-- Main courses-->
+        <div class="menu-category">           
+            <h2 id="main-courses">Main Courses</h2>
+            <div class="menu-items" data-category="main-courses">           
+                <div class="menu-item" data-name="Egg Masala Curry" data-price="210" data-rating="4.1">
+                    <img src="egg masala curry.jpg" alt="Egg Masala Curry">
+                    <div class="menu-item-details">
+                        <h2>"Egg Masala Curry"</h2>
+                        <p>Description of main course 1</p>
+                        <p><strong>₹210.00</strong></p>
+                        <p>Rating: ★★★★☆ (4.1)</p>
+                        <button onclick="addToOrder('Egg Masala Curry',210.00)">Order Now</button>
+                    </div>
+                </div>
+                <div class="menu-item" data-name="Kadhi Chawal" data-price="330" data-rating="4.9">
+                    <img src="kadhi chawal.jpg" alt="Kadhi Chawal">
+                    <div class="menu-item-details">
+                        <h2>Kadhi Chawal</h2>
+                        <p>Description of main course 2</p>
+                        <p><strong>₹330.00</strong></p>
+                        <p>Rating: ★★★★★ (4.9)</p>
+                        <button onclick="addToOrder('Kadhi Chawal',330.00)">Order Now</button>
+                    </div>
+                </div>
+                <div class="menu-item" data-name="Pulao" data-price="410" data-rating="4.8">
+                    <img src="pulao.jpg" alt="Pulao">
+                    <div class="menu-item-details">
+                        <h2>Pulao</h2>
+                        <p>Description of main course 3</p>
+                        <p><strong>₹410.00</strong></p>
+                        <p>Rating: ★★★★★ (4.8)</p>
+                        <button onclick="addToOrder('Pulao',410.00)">Order Now</button>
+                    </div>
+                </div>
+                <div class="menu-item" data-name="Pomfret Sukkha Masala" data-price="560" data-rating="4.5">
+                    <img src="pomfret sukkha masala.jpg" alt="Pomfret Sukkha Masala">
+                    <div class="menu-item-details">
+                        <h2>Pomfret Sukkha Masala</h2>
+                        <p>Description of main course 4</p>
+                        <p><strong>₹560.00</strong></p>
+                        <p>Rating: ★★★★★ (4.5)</p>
+                        <button onclick="addToOrder('Pomfret Sukkha Masala',560.00)">Order Now</button>
+                    </div>
+                </div>
+                <div class="menu-item" data-name="Paneer Makhani" data-price="310" data-rating="4.7">
+                    <img src="paneer makhni.jpg" alt="Paneer Makhani">
+                    <div class="menu-item-details">
+                        <h2>Paneer Makhani</h2>
+                        <p>Description of main course 5</p>
+                        <p><strong>₹310.00</strong></p>
+                        <p>Rating: ★★★★★ (4.7)</p>
+                        <button onclick="addToOrder('Paneer Makhani',310.00)">Order Now</button>
+                    </div>
+                </div>
+                <div class="menu-item" data-name="Chicken Biryani" data-price="250" data-rating="4.8">
+                    <img src="chicken biryani.jpg" alt="Chicken Biryani">
+                    <div class="menu-item-details">
+                        <h2>Chicken Biryani</h2>
+                        <p>Description of main course 6</p>
+                        <p><strong>₹250.00</strong></p>
+                        <p>Rating: ★★★★★ (4.8)</p>
+                        <button onclick="addToOrder('Chicken Biryani',250.00)">Order Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Desserts -->
+        <div class="menu-category">
+            <h2 id="desserts">Desserts</h2>
+            <div class="menu-items" data-name="Brownies" data-category="desserts" >       
+                <div class="menu-item" data-price="70" data-rating="4.6">
+                    <img src="Brownies.jpg" alt="Brownies">
+                    <div class="menu-item-details">
+                        <h2>Brownies</h2>
+                        <p>Description of dessert 1</p>
+                        <p><strong>₹70.00</strong></p>
+                        <p>Rating: ★★★★★ (4.6)</p>
+                        <button onclick="addToOrder('Brownies',70.00)">Order Now</button>
+                    </div>
+                </div>
+                <div class="menu-item" data-name="Puddings" data-price="140" data-rating="4.4">
+                    <img src="Puddings.jpg" alt="Puddings">
+                    <div class="menu-item-details">
+                        <h2>Puddings</h2>
+                        <p>Description of dessert 2</p>
+                        <p><strong>₹140.00</strong></p>
+                        <p>Rating: ★★★★☆ (4.4)</p>
+                        <button onclick="addToOrder('Puddings',140.00)">Order Now</button>
+                    </div>
+                </div>
+                <div class="menu-item" data-name="Pies" data-price="60" data-rating="4.1">
+                    <img src="Pies.jpg" alt="Pies">
+                    <div class="menu-item-details">
+                        <h2>Pies</h2>
+                        <p>Description of dessert 3</p>
+                        <p><strong>₹60.00</strong></p>
+                        <p>Rating: ★★★★☆(4.1)</p>
+                        <button onclick="addToOrder('Pies',60.00)">Order Now</button>
+                    </div>
+                </div>
+                    <div class="menu-item" data-name="Fruit" data-price="55" data-rating="4.4">
+                    <img src="fruit.jpg" alt="Fruit">
+                    <div class="menu-item-details">
+                        <h2>Fruit</h2>
+                        <p>Description of dessert 4</p>
+                        <p><strong>₹55.00</strong></p>
+                        <p>Rating: ★★★★☆ (4.4)</p>
+                        <button onclick="addToOrder('Fruit',55.00)">Order Now</button>
+                    </div>
+                </div>
+                <div class="menu-item" data-price="100" data-rating="4.9">
+                    <img src="kunafa.jpg" alt="Kunafa">
+                    <div class="menu-item-details">
+                        <h2>Kunafa</h2>
+                        <p>Description of dessert 5</p>
+                        <p><strong>₹100.00</strong></p>
+                        <p>Rating: ★★★★★ (4.9)</p>
+                        <button onclick="addToOrder('Kunafa',100.00)">Order Now</button>
+                    </div>
+                </div>
+                <div class="menu-item" data-name="Cheese Cake" data-price="140" data-rating="4.7">
+                    <img src="cheese cake.webp" alt="Cheese Cake">
+                    <div class="menu-item-details">
+                        <h2>Cheese Cake</h2>
+                        <p>Description of dessert 6</p>
+                        <p><strong>₹140.00</strong></p>
+                        <p>Rating: ★★★★★ (4.7)</p>
+                        <button onclick="addToOrder('Cheese Cake',140.00)">Order Now</button>
+                    </div>
+                </div>
+            </div> 
+        </div> 
+
+        <!-- Beverages -->
+        <div class="menu-category">
+            <h2 id="beverages">Beverages</h2> 
+            <div class="menu-items" data-category="beverages">       
+                <div class="menu-item" data-name="Iced tea" data-price="30" data-rating="4.0">
+                    <img src="iced tea.jpg" alt="Iced tea">
+                    <div class="menu-item-details">
+                        <h2>Iced tea</h2>
+                        <p>Description of beverage 1</p>
+                        <p><strong>₹30.00</strong></p>
+                        <p>Rating: ★★★★☆ (4.0)</p>
+                        <button onclick="addToOrder('Iced tea',30.00)">Order Now</button>
+                    </div>
+                </div>
+                <div class="menu-item" data-name="Lemonade" data-price="30" data-rating="4.2">
+                    <img src="lemonade.jpg" alt="Lemonade">
+                    <div class="menu-item-details">
+                        <h2>Lemonade</h2>
+                        <p>Description of beverage 2</p>
+                        <p><strong>₹30.00</strong></p>
+                        <p>Rating: ★★★★☆ (4.2)</p>
+                        <button onclick="addToOrder('Lemonade',30.00)">Order Now</button>
+                    </div>
+                </div>
+                <div class="menu-item" data-name="Hot chocolate" data-price="70" data-rating="4.7">
+                    <img src="hot chocolate.jpg" alt="Hot chocolate">
+                    <div class="menu-item-details">
+                        <h2>Hot chocolate</h2>
+                        <p>Description of beverage 3</p>
+                        <p><strong>₹70.00</strong></p>
+                        <p>Rating: ★★★★★ (4.7)</p>
+                        <button onclick="addToOrder('Hot chocolate',70.00)">Order Now</button>
+                    </div>
+                </div>
+                <div class="menu-item" data-name="Milk Shake" data-price="60" data-rating="4.8">
+                    <img src="milkshakes.jpg" alt="Milk Shake">
+                    <div class="menu-item-details">
+                        <h2>Milk Shake</h2>
+                        <p>Description of beverage 4</p>
+                        <p><strong>₹60.00</strong></p>
+                        <p>Rating: ★★★★★ (4.8)</p>
+                        <button onclick="addToOrder('Milk Shake',60.00)">Order Now</button>
+                    </div>
+                </div>
+                <div class="menu-item" data-name="Mojito" data-price="30" data-rating="4.5">
+                    <img src="mojito.jpg" alt="Mojito">
+                    <div class="menu-item-details">
+                        <h2>Mojito</h2>
+                        <p>Description of beverage 5</p>
+                        <p><strong>₹30.00</strong></p>
+                        <p>Rating: ★★★★★ (4.5)</p>
+                        <button onclick="addToOrder('Mojito',30.00)">Order Now</button>
+                    </div>
+                </div>
+                <div class="menu-item" data-name="Coconut water" data-price="50" data-rating="4.3.">
+                    <img src="Coconut water.jpg" alt="Coconut water">
+                    <div class="menu-item-details">
+                        <h2>Coconut water</h2>
+                        <p>Description of beverage 6</p>
+                        <p><strong>₹50.00</strong></p>
+                        <p>Rating: ★★★★☆ (4.3)</p>
+                        <button onclick="addToOrder('Coconut water',50.00)">Order Now</button>
+                    </div>
+                </div>
+        
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Lajawab. All rights reserved.</p>
+    </footer>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
